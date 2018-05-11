@@ -40,4 +40,13 @@ public class Shop {
         }
         return totalValue;
     }
+
+    public double getStockPotentialProfit() {
+
+        double potentialProfit = 0;
+        for (Isell item : stock) { potentialProfit += item.calculateMarkup();
+        }
+        return potentialProfit;
+
+    }
 }

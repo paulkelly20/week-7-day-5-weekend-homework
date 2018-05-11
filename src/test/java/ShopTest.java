@@ -56,8 +56,12 @@ public class ShopTest {
         assertEquals(450, shop.getStockValue(), 0);
     }
 
-
-
-
-
+    @Test
+    public void getTotalShopPotentialProfit() {
+        shop.addStock(guitar1);
+        shop.addStock(guitar2);
+        shop.addStock(piano);
+        shop.addStock(sheetMusic);
+        assertEquals(455, shop.getStockPotentialProfit(), 0);
+    }
 }
