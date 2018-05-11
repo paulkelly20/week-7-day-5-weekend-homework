@@ -34,8 +34,6 @@ public abstract class Item implements Isell {
         if(this.buyPrice == 0)
             {return 100;}
             else return (calculateMarkup() / this.sellPrice) * 100;
-
-
     }
 }
 
