@@ -13,12 +13,24 @@ public class ItemTest {
 
     @Before
     public void before() {
-        guitarString = new GuitarString("4 Guitar Strings", 10, 20, "Bass");
+        guitarString = new GuitarString("4 Guitar Strings", 10, 30, "Bass");
         sheetMusic = new SheetMusic("Piano", 0, 5, "Intro to piano");
     }
 
     @Test
     public void getGuitarStringMarkUp() {
-        assertEquals(10, guitarString.calculateMarkup(), 0);
+        assertEquals(20, guitarString.calculateMarkup(), 0);
     }
+
+    @Test
+    public void getSheetMusicMarkup() {
+        assertEquals(5 ,sheetMusic.calculateMarkup(), 0);
+    }
+
+    @Test
+    public void getGuitarStringMarkupPercentage() {
+        assertEquals(66.66, guitarString.calculateMarkupPercentage(), 0.1);
+    }
+
+
 }

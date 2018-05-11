@@ -27,6 +27,16 @@ public abstract class Item implements Isell {
     }
 
     public double calculateMarkup() {
-        return this.buyPrice - getSellPrice();
+        return   getSellPrice() - this.buyPrice;
+    }
+
+    public double calculateMarkupPercentage(){
+        if(this.buyPrice == 0)
+            {return 100;}
+            else return (calculateMarkup() / this.sellPrice) * 100;
+
+
     }
 }
+
+
