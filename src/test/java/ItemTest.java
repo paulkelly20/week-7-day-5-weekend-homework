@@ -32,5 +32,10 @@ public class ItemTest {
         assertEquals(66.66, guitarString.calculateMarkupPercentage(), 0.1);
     }
 
+    @Test
+    public void getSheetMusicMarkupPercentage() {
+        assertEquals(100, sheetMusic.calculateMarkupPercentage(), 0.1);
+    }
+
 
 }
